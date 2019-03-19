@@ -3,7 +3,10 @@
 }
 
 body {
-    background: thistle;
+    background-color: thistle;
+    /* background-image: url("../css/images/cubebackground.jpg"); */
+    /* background-size: cover; */
+    /* position: absolute; */
 }
 
 .gif {
