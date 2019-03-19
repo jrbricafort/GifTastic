@@ -1,5 +1,5 @@
 // Premade list of gifs
-var gifs = ["Black Panther", "Boondocks", "Futurama", "Rick and Morty", "Tonight Show", "HIMYM", "Sixers", "Steelers", "Nike", "Eagles" ];
+var gifs = ["Black Panther", "Boondocks", "Futurama", "Rick and Morty", "Tonight Show", "HIMYM", "Sixers", "Steelers", "Nike", "Olympics" ];
 
 // displayGifInfo function re-renders the HTML to display the appropriate content
 function displayGifInfo() {
