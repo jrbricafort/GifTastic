@@ -1,5 +1,5 @@
 // Premade list of gifs
-var gifs = ["Black Panther", "Boondocks", "Futurama", "Rick and Morty", "Tonight Show", "HIMYM", "Sixers", "Steelers", "Nike", "Olympics" ];
+var gifs = ["Black Panther", "Boondocks", "Futurama", "Rick and Morty", "Tonight Show", "HIMYM", "Sixers", "Steelers", "Nike", "Olympics"];
 
 // displayGifInfo function re-renders the HTML to display the appropriate content
 function displayGifInfo() {
@@ -88,6 +88,8 @@ $("#add-gif").on("click", function (event) {
     var gif = $("#gif-input").val().trim();
     gifs.push(gif);
     renderButtons();
+    $("#gif-input").val("")
+
 });
 
 // Adding click event listeners to all elements with a class of "gif"
