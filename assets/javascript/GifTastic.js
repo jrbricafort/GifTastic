@@ -1,5 +1,5 @@
 // Premade list of gifs
-var gifs = ["Black Panther", "Boondocks", "Futurama", "Rick and Morty"];
+var gifs = ["Black Panther", "Boondocks", "Futurama", "Rick and Morty", "Tonight Show", "HIMYM", "Sixers", "Steelers", "Nike", "Eagles" ];
 
 // displayGifInfo function re-renders the HTML to display the appropriate content
 function displayGifInfo() {
@@ -17,7 +17,7 @@ function displayGifInfo() {
     }).then(function (response) {
 
         var gifsArray = response.data
-        $("#gifs-view").empty();
+        // $("#gifs-view").empty();
         for (var i = 0; i < gifsArray.length; i++) {
 
             // Creates a div to hold the gif
@@ -30,13 +30,13 @@ function displayGifInfo() {
             // Creates an element to have the rating displayed
             var gifRating = $("<h3>").text(gifsArray[i].rating)
             // Displays the rating
-            gifDataToDiv.append("<h3>Rating: <h3>" + gifsArray[i].rating)
+            gifDataToDiv.append("<h3>Rating: " + gifsArray[i].rating + "<h3>")
 
             /////////// Images ///////////
-            $('#gifs-view').append(gifDataToDiv);
-            var gitImage = $("<img>").attr("src", gifsArray[i].images.fixed_width.url)
-            gitImage.attr("data-still", gifsArray[i].images.fixed_width_still.url)
-            gitImage.attr("data-animate", gifsArray[i].images.fixed_width.url)
+            $('#gifs-view').prepend(gifDataToDiv);
+            var gitImage = $("<img>").attr("src", gifsArray[i].images.original.url)
+            gitImage.attr("data-still", gifsArray[i].images.original_still.url)
+            gitImage.attr("data-animate", gifsArray[i].images.original.url)
             gitImage.attr("data-state", "animate")
             gitImage.attr("class", "gif")
             gifDataToDiv.append(gitImage)

@@ -1,0 +1,12 @@
+*{
+    margin: 10px;
+}
+
+body{
+    background: thistle;
+}
+
+.gif{
+    max-width: 100%;
+    height: auto;
+}
